@@ -1,0 +1,28 @@
+name: Task First Workflow
+
+on: 
+    push:
+        branches:
+            - 'main'
+    workflow_dispatch:         
+jobs:
+  first-jobs:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print event info Context Example
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+
+      - name: Conditional Step Expression Example
+        if: github.event_name == 'push'
+        run: echo "This runs only on push events"  
+
+      - name: Print greeting
+        run: echo "Hello Abhishek"
+      
+      - name: Print goodBye
+        run: echo "Done Bye"
