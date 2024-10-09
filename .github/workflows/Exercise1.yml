@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Greet the user
-        uses: ./Tasks
+        uses: ./home/runner/work/TaskToComplete/TaskToComplete/Tasks
         with:
             name: 'World'
 
