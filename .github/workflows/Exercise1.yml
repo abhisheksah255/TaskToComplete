@@ -27,17 +27,3 @@ jobs:
       
       - name: Print goodBye
         run: echo "Done Bye"
-
-  Second-Job:
-    runs-on: ubuntu-latest
-        
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Greet the user
-        uses: ./home/runner/work/TaskToComplete/TaskToComplete/Tasks
-        with:
-            name: 'World'
-
-        
