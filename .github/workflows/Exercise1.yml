@@ -12,6 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+
       - name: Print event info Context Example
         run: |
           echo "Event: ${{ github.event_name }}"
@@ -26,3 +27,17 @@ jobs:
       
       - name: Print goodBye
         run: echo "Done Bye"
+
+  Second-Job:
+    runs-on: ubuntu-latest
+        
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Greet the user
+        uses: ./Tasks
+        with:
+            name: 'World'
+
+        
