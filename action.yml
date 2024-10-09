@@ -1,0 +1,9 @@
+name: Action Perform
+description: A simple action to greet a user.
+inputs:
+  name:
+    description: 'The name to greet'
+    required: true
+runs:
+  using: 'node18'
+  main: 'index.js'
